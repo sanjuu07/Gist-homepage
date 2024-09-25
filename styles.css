@@ -18,7 +18,7 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: #8acee7;
-    background-image: url('IMAGES/bg-main.webp');
+    background-image: url('images/bg-main.webp');
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; /* Prevents the image from repeating */
