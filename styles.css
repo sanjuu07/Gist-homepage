@@ -1,0 +1,189 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Wrapper Styling */
+body, html {
+    height: 100%;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+    background-color: #8acee7;
+    background-image: url('IMAGES/bg-main.webp');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    min-height: 100vh;
+}
+
+/* Header Styling */
+.header {
+    background-color: #ffffff;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Allows header content to wrap on smaller screens */
+}
+
+/* Logo Styling */
+.logo-container {
+    flex-shrink: 0;
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.logo {
+    height: 90px; /* Adjust logo size if needed */
+    width: auto;
+}
+
+/* Header content styling */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    flex: 1; /* Allow content to take remaining space */
+    text-align: center; /* Ensure text is centered on smaller screens */
+}
+
+.college-name {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.college-address {
+    font-size: 1em;
+}
+
+.college-info {
+    font-size: 1em;
+    margin: 0;
+}
+
+.image-container {
+    display: flex;
+    gap: 8px; /* Space between the two images */
+}
+
+.header-image {
+    height: 50px; /* Adjust the height as needed */
+    margin-top: 13px;
+}
+
+.header-image2 {
+    height: 76px; /* Adjust the height as needed */
+    width: auto;
+}
+
+/* Container Styling (for login form) */
+.container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #70b9e386;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 30px;
+}
+
+/* Login Form Title */
+.title {
+    font-size: 1.8em;
+    color: #000000;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #000000;
+    font-weight: 500;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #6a63b8;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.btn {
+    background-color: #304bd2;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #c22743;
+}
+
+/* For screens up to 768px (tablets) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column; /* Stack the logo and header content */
+        text-align: center;
+    }
+
+    .logo {
+        height: 70px; /* Resize logo for smaller screens */
+    }
+
+    .header-image, .header-image2 {
+        height: 40px; /* Resize header images */
+    }
+
+    .container {
+        max-width: 100%; /* Full-width container for smaller screens */
+        padding: 20px;
+    }
+}
+
+/* For screens up to 480px (mobile) */
+@media (max-width: 480px) {
+    .college-name {
+        font-size: 1.4em; /* Adjust font size for mobile screens */
+    }
+
+    .college-info, .college-address {
+        font-size: 0.9em; /* Slightly smaller font for mobile */
+    }
+
+    .logo {
+        height: 60px; /* Smaller logo on mobile */
+    }
+
+    .header-image, .header-image2 {
+        height: 30px; /* Smaller header images */
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .title {
+        font-size: 1.6em; /* Smaller title on mobile */
+    }
+}
