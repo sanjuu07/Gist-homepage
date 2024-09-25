@@ -77,11 +77,10 @@ body, html {
 
 .header-image {
     height: 50px; /* Adjust the height as needed */
-    margin-top: 13px;
 }
 
 .header-image2 {
-    height: 76px; /* Adjust the height as needed */
+    height: 90px; /* Adjust the height as needed */
     width: auto;
 }
 
