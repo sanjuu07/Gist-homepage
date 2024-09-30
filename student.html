@@ -28,9 +28,9 @@
             </div>
             <!-- Icons below profile -->
             <div class="top-icons">
-                <i class="fas fa-home"></i>
-                <i class="fas fa-calendar-alt"></i>
-                <i class="fas fa-sign-out-alt"></i>
+                <i class="fas fa-home" id="home-icon"></i> <!-- Assigned ID for home -->
+                <i class="fas fa-calendar-alt" id="calendar-icon"></i> <!-- Assigned ID for calendar -->
+                <i class="fas fa-sign-out-alt" id="logout-icon"></i>
             </div>
         </div>
     </header>
@@ -38,13 +38,16 @@
     <main>
         <section class="sidebar">
             <ul>
-                <li><i class="fas fa-id-card"></i> Basic Information</li>
-                <li><i class="fas fa-calendar-check"></i> Attendance</li>
-                <li><i class="fas fa-edit"></i> Up-Coming Exams</li>
-                <li><i class="fas fa-download"></i> Download Hall-Ticket</li>
+                <li id="basic-info"><i class="fas fa-id-card"></i> Basic Information</li>
+                <li id="attendance"><i class="fas fa-calendar-check"></i> Attendance</li>
+                <li id="upcoming-exams"><i class="fas fa-edit"></i> Up-Coming Exams</li>
+                <li id="download-hallticket"><i class="fas fa-download"></i> Download Hall-Ticket</li>
             </ul>
         </section>
-        <section class="content">
+        
+        <!-- Dynamic Content Section -->
+        <section class="content" id="content-section">
+            <!-- Initial content or dynamically loaded content goes here -->
             <div class="announcements">
                 <h2><i class="fas fa-bullhorn"></i> Announcements</h2>
                 <ul>
@@ -57,6 +60,6 @@
         </section>
     </main>
 
-    <script src="scripts.js"></script>
+    <script src="student.js"></script>
 </body>
 </html>
