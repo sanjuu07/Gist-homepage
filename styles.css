@@ -8,6 +8,7 @@
 /* Body and Wrapper Styling */
 body, html {
     height: 100%;
+    background-image: url('images/bg-main.webp');
 }
 
 .main-wrapper {
@@ -18,7 +19,6 @@ body, html {
     height: 100%;
     width: 100%;
     background-color: #8acee7;
-    background-image: url('images/bg-main.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
