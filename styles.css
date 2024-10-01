@@ -6,24 +6,29 @@
 }
 
 /* Body and Wrapper Styling */
-body, html {
-    height: 100%;
-    background-image: url('images/bg-main.webp');
+html, body {
+    height: 100%; /* Ensure both html and body take full height */
+    margin: 0; /* Remove default margin */
+    background-image: url('images/bg-main.webp'); /* Replace with the actual image path */
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-position: center center; /* Centers the image horizontally and vertically */
+    background-repeat: no-repeat; /* Ensures the image does not repeat */
+    background-attachment: fixed; /* Keeps the background fixed when scrolling */
 }
+
+
 
 .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100%;
+    height: 100vh; /* Use full viewport height */
     width: 100%;
-    background-color: #8acee7;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
+    /* Remove any background properties here */
 }
+
+
 
 /* Header Styling */
 .header {
@@ -83,7 +88,7 @@ body, html {
 
 /* NAAC Image - increased size to match NBA */
 .header-image.naac {
-    width: 88px;/* Match NBA logo width */
+    width: 88px; /* Match NBA logo width */
     height: auto;
     object-fit: contain; /* Maintain aspect ratio */
 }
@@ -96,7 +101,7 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    margin-top: 90px;
+    margin-top: 50px;
 }
 
 /* Login Form Title */
