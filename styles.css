@@ -7,28 +7,23 @@
 
 /* Body and Wrapper Styling */
 html, body {
-    height: 100%; /* Ensure both html and body take full height */
-    margin: 0; /* Remove default margin */
+    height: 100%;
+    margin: 0;
     background-image: url('images/bg-main.webp'); /* Replace with the actual image path */
-    background-size: cover; /* Ensures the image covers the entire background */
-    background-position: center center; /* Centers the image horizontally and vertically */
-    background-repeat: no-repeat; /* Ensures the image does not repeat */
-    background-attachment: fixed; /* Keeps the background fixed when scrolling */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
-
-
 
 .main-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    height: 100vh; /* Use full viewport height */
+    height: 100vh;
     width: 100%;
-    /* Remove any background properties here */
 }
-
-
 
 /* Header Styling */
 .header {
@@ -37,9 +32,8 @@ html, body {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space out items evenly */
+    justify-content: space-between;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Allows header content to wrap on smaller screens */
 }
 
 /* Logo Styling */
@@ -48,7 +42,7 @@ html, body {
 }
 
 .logo {
-    height: 90px; /* Adjust logo size if needed */
+    height: 90px;
     width: auto;
 }
 
@@ -56,9 +50,9 @@ html, body {
 .header-content {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content horizontally */
+    align-items: center;
     text-align: center;
-    flex: 1; /* Allow content to take remaining space */
+    flex: 1;
 }
 
 .college-name {
@@ -74,34 +68,88 @@ html, body {
 /* Image container for NBA and NAAC logos */
 .image-container {
     display: flex;
-    justify-content: center; /* Center the images */
-    gap: 15px; /* Space between images */
-    align-items: center; /* Align images vertically */
+    justify-content: center;
+    gap: 15px;
+    align-items: center;
 }
 
-/* NBA Image */
 .header-image {
-    width: 70px; /* Set equal width for both images */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the image scales proportionally without distortion */
+    width: 66px;
+    height: auto;
+    object-fit: contain;
 }
 
-/* NAAC Image - increased size to match NBA */
 .header-image.naac {
-    width: 88px; /* Match NBA logo width */
+    width: 88px;
     height: auto;
-    object-fit: contain; /* Maintain aspect ratio */
+    object-fit: contain;
+}
+
+/* Navigation Bar */
+.nav-bar {
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.gist-text {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #000;
+    
+}
+
+/* Navigation items styling */
+.nav-bar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 300px;
+    background-color: #ffffff;
+}
+
+.nav-item {
+    padding: 10px 15px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.nav-item:hover {
+    background-color: rgba(255, 134, 28, 0.785);
+}
+
+/* Content Wrapper for Department Info and Login Form */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+/* Department Info Styling */
+.department-info {
+    flex: 2; /* Take more space on the left */
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    margin-right: 20px; /* Space between the two sections */
 }
 
 /* Container Styling (for login form) */
 .container {
+    flex: 1; /* Take less space on the right */
     max-width: 400px;
     width: 100%;
-    background-color: #70b9e386;
-    border-radius: 10px;
+    background-color: rgba(216, 232, 250, 0.66);
+    border-radius: 28px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    margin-top: 50px;
 }
 
 /* Login Form Title */
@@ -150,55 +198,34 @@ input, select {
 
 /* Responsive styles for tablets (screens up to 768px) */
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column; /* Stack logo, content, and images vertically */
-    }
-
-    .logo {
-        height: 70px; /* Adjust logo size for tablets */
-    }
-
-    .image-container {
-        justify-content: center;
-    }
-
-    .header-image {
-        width: 60px; /* Adjust header images for tablets */
-    }
-
-    .container {
-        max-width: 100%; /* Ensure the container is full-width on smaller screens */
-        padding: 20px;
-    }
-}
-
-/* Responsive styles for mobile (screens up to 480px) */
-@media (max-width: 480px) {
     .college-name {
-        font-size: 1.4em; /* Adjust college name size for mobile */
+        font-size: 1.5em;
     }
 
-    .college-info, .college-address {
-        font-size: 0.9em; /* Adjust other text size for mobile */
+    .gist-text {
+        font-size: 1.5em;
     }
 
-    .logo {
-        height: 60px; /* Adjust logo size for mobile */
+    .nav-item {
+        font-size: 0.9em; /* Adjust department name size */
     }
 
     .header-image {
-        width: 50px; /* Adjust header image size for mobile */
+        width: 50px; /* Adjust image size for smaller screens */
     }
 
-    .image-container {
-        gap: 10px; /* Adjust gap between images for smaller screens */
+    .content-wrapper {
+        flex-direction: column; /* Stack items on smaller screens */
+        align-items: center;
+    }
+
+    .department-info {
+        margin-right: 0; /* Remove margin in column layout */
+        width: 100%; /* Full width for department info */
     }
 
     .container {
-        padding: 15px;
-    }
-
-    .title {
-        font-size: 1.6em; /* Adjust title size for mobile */
+        max-width: 90%; /* Max width for login form */
+        margin-top: 20px; /* Margin for spacing */
     }
 }
