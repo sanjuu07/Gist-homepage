@@ -9,7 +9,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-image: url('images/bg-main.webp'); /* Replace with the actual image path */
+    background-image: url('images/clg.jpg'); /* Replace with the actual image path */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -96,7 +96,8 @@ html, body {
 .gist-text {
     font-size: 2.5em;
     font-weight: bold;
-    color: #000;
+    color: #ffffff;
+    
     
 }
 
@@ -139,6 +140,7 @@ html, body {
     padding: 20px;
     border-radius: 8px;
     margin-right: 20px; /* Space between the two sections */
+    background-color: #ffffff98;
 }
 
 /* Container Styling (for login form) */
