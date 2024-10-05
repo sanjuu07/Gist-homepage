@@ -8,53 +8,71 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-     <div class="main-wrapper">
+    <div class="main-wrapper">
         <header class="header">
             <div class="logo-container">
                 <img src="images/gist.jpg" alt="College Logo" class="logo">
             </div>
             <div class="header-content">
-                <h2 class="college-name">GEETHANAJALI INSTITUTE OF SCIENCE & TECHNOLOGY</h2>
+                <h2 class="college-name">GEETHANJALI INSTITUTE OF SCIENCE & TECHNOLOGY</h2>
                 <p class="college-info">(Autonomous)</p>
-                <p class="college-address">(Approved by AICTE, New Delhi & Permanently Affiliated to JNTUA, Anantapur)3rd Mile, Bombay Highway, Gangavaram(V), Kovur (Md),</p>
-                <div class="college-address">
-                    <p>S.P.S.R. Nellore (Dt) Pin: 524137</p>
-                </div>
+                <p class="college-address">(Approved by AICTE, New Delhi & Permanently Affiliated to JNTUA, Anantapur) 3rd Mile, Bombay Highway, Gangavaram(V), Kovur (M),S.P.S.R. Nellore (Dt) Pin: 524137</p>
+                
             </div>
             <div class="image-container">
                 <img src="images/nba.png" class="header-image" alt="NBA Logo">
                 <img src="images/naac.png" class="header-image naac" alt="NAAC Logo">
             </div>
-            
         </header>
-            <div class="container">
-                <div class="login-box">
-                    <h1 class="title">Hall Ticket Portal</h1>
-                    <form id="login-form">
-                        <div class="form-group">
-                            <label for="username">Username</label>
-                            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="role">Login as</label>
-                            <select id="role" name="role" required>
-                                <option value="student">Student</option>
-                                <option value="teacher">Teacher</option>
-                                <option value="admin">Admin</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn">Login</button>
-                    </form>
-                </div>
+
+        <!-- Updated Navigation Bar for Departments -->
+        <nav class="nav-bar">
+            <div class="gist-text">GIST</div>
+            <ul>
+                <li data-department="cs" class="nav-item">CS</li>
+                <li data-department="ds" class="nav-item">DS</li>
+                <li data-department="eee" class="nav-item">EEE</li>
+                <li data-department="civ" class="nav-item">CIV</li>
+                <li data-department="mech" class="nav-item">MECH</li>
+                <li data-department="aids" class="nav-item">AI&DS</li>
+                <li data-department="aiml" class="nav-item">AIML</li>
+                <li data-department="cse" class="nav-item">CSE</li>
+                <li data-department="ece" class="nav-item">ECE</li>
+            </ul>
+        </nav>
+
+        <div class="content-wrapper">
+            <div class="department-info" id="department-info">
+                <h2 class="department-title">WELCOME TO DEPARTMENT OF CSE</h2>
+                <p>A Computer Science and Engineering (CSE) department is an academic program that combines computer science and computer engineering approaches.</p>
+            </div>
+
+            <div class="container" id="login-form-container">
+                <h1 class="title">Login</h1>
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Login as</label>
+                        <select id="role" name="role" required>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="admin">Admin</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
             </div>
         </div>
-        <script src="script.js"></script>
-    </body>
+    </div>
+</body>
 </html>
