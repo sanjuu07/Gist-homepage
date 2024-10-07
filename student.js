@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         contentSection.innerHTML = `
             <h2>Download Hall-Ticket</h2>
             <p>You can download your hall ticket from here.</p>
-            <button class="btn-download">Download Hall Ticket</button>
+            <button class="btn-download"><a href="downloads/hall-ticket.pdf" download>Download Hall Ticket</a></button>
         `;
     });
 
