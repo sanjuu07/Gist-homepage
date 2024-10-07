@@ -1,4 +1,3 @@
-// Wait until the DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Get the content section and sidebar links
     const contentSection = document.getElementById('content-section');
@@ -10,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const logoutBtn = document.getElementById('logout-icon');  // Logout button reference
     const calendarBtn = document.getElementById('calendar-icon');  // Calendar icon reference
     const feesBtn = document.getElementById('check-fees');  // Fees button reference
+    const courseMaterialBtn = document.getElementById('course-material'); // Course Material button reference
 
     // Event listener for Home (Announcements)
     homeBtn.addEventListener('click', function() {
@@ -71,89 +71,101 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     });
 
-// Event listener for Calendar (Class Schedule)
-calendarBtn.addEventListener('click', function() {
-    contentSection.innerHTML = `
-        <h2>Class Schedule</h2>
-        <table class="schedule-table">
-            <thead>
-                <tr>
-                    <th>Day</th>
-                    <th>9:00 - 10:00 AM</th>
-                    <th>10:00 - 11:00 AM</th>
-                    <th>11:00 - 12:00 PM</th>
-                    <th>1:00 - 2:00 PM</th>
-                    <th>2:00 - 3:00 PM</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Monday</td>
-                    <td>Math</td>
-                    <td>Physics</td>
-                    <td>Computer Science</td>
-                    <td>Electronics</td>
-                    <td>Free Period</td>
-                </tr>
-                <tr>
-                    <td>Tuesday</td>
-                    <td>Electronics</td>
-                    <td>Computer Science</td>
-                    <td>Math</td>
-                    <td>Physics</td>
-                    <td>Activities</td>
-                </tr>
-                <tr>
-                    <td>Wednesday</td>
-                    <td>Computer Science</td>
-                    <td>Math</td>
-                    <td>Physics</td>
-                    <td>Electronics</td>
-                    <td>Seminar</td>
-                </tr>
-                <tr>
-                    <td>Thursday</td>
-                    <td>Math</td>
-                    <td>Physics</td>
-                    <td>Electronics</td>
-                    <td>Computer Science</td>
-                    <td>Lab</td>
-                </tr>
-                <tr>
-                    <td>Friday</td>
-                    <td>Physics</td>
-                    <td>Electronics</td>
-                    <td>Computer Science</td>
-                    <td>Math</td>
-                    <td>Group Activities</td>
-                </tr>
-                <tr>
-                    <td>Saturday</td>
-                    <td>Electronics</td>
-                    <td>Math</td>
-                    <td>Physics</td>
-                    <td>Computer Science</td>
-                    <td>Free Period</td>
-                </tr>
-            </tbody>
-        </table>
-    `;
-});
+    // Event listener for Calendar (Class Schedule)
+    calendarBtn.addEventListener('click', function() {
+        contentSection.innerHTML = `
+            <h2>Class Schedule</h2>
+            <table class="schedule-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>9:00 - 10:00 AM</th>
+                        <th>10:00 - 11:00 AM</th>
+                        <th>11:00 - 12:00 PM</th>
+                        <th>1:00 - 2:00 PM</th>
+                        <th>2:00 - 3:00 PM</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday</td>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Computer Science</td>
+                        <td>Electronics</td>
+                        <td>Free Period</td>
+                    </tr>
+                    <tr>
+                        <td>Tuesday</td>
+                        <td>Electronics</td>
+                        <td>Computer Science</td>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Activities</td>
+                    </tr>
+                    <tr>
+                        <td>Wednesday</td>
+                        <td>Computer Science</td>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Electronics</td>
+                        <td>Seminar</td>
+                    </tr>
+                    <tr>
+                        <td>Thursday</td>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Electronics</td>
+                        <td>Computer Science</td>
+                        <td>Lab</td>
+                    </tr>
+                    <tr>
+                        <td>Friday</td>
+                        <td>Physics</td>
+                        <td>Electronics</td>
+                        <td>Computer Science</td>
+                        <td>Math</td>
+                        <td>Group Activities</td>
+                    </tr>
+                    <tr>
+                        <td>Saturday</td>
+                        <td>Electronics</td>
+                        <td>Math</td>
+                        <td>Physics</td>
+                        <td>Computer Science</td>
+                        <td>Free Period</td>
+                    </tr>
+                </tbody>
+            </table>
+        `;
+    });
 
-// Event listener for Fees Checking
-feesBtn.addEventListener('click', function() {
-    contentSection.innerHTML = `
-        <h2>Fee Details</h2>
-        <ul>
-            <li><strong>Course Fee:</strong> ₹38,000  <span class="status-dot paid"></span></li>
-            <li><strong>Autonomous Fee:</strong> ₹10,000<span class="status-dot paid"></span></li>
-            <li><strong>Hostel Fee:</strong> ₹77,000 <span class="status-dot unpaid"></span> <span class="due-label">Due</span></li>
-            <li><strong>Van Fee:</strong> ₹19,000 <span class="status-dot unpaid"></span> <span class="due-label">Due</span></li>
-        </ul>
-    `;
-});
+    // Event listener for Fees Checking
+    feesBtn.addEventListener('click', function() {
+        contentSection.innerHTML = `
+            <h2>Fee Details</h2>
+            <ul>
+                <li><strong>Course Fee:</strong> ₹38,000  <span class="status-dot paid"></span></li>
+                <li><strong>Autonomous Fee:</strong> ₹10,000<span class="status-dot paid"></span></li>
+                <li><strong>Hostel Fee:</strong> ₹77,000 <span class="status-dot unpaid"></span> <span class="due-label">Due (Bal=₹53,000)</span></li>
+                <li><strong>Van Fee:</strong> ₹19,000 <span class="status-dot unpaid"></span> <span class="due-label">Due (Bal=₹19,000)</span></li>
+            </ul>
+        `;
+    });
 
- 
+    // Event listener for Course Material
+    courseMaterialBtn.addEventListener('click', function() {
+        contentSection.innerHTML = `
+            <h2>Course Material</h2>
+            <ul>
+                <li><strong>Data Science Notes:</strong> <a href="downloads/DS.pdf" download>Download</a></li>
+                <li><strong>Machine Learning Lab:</strong> <a href="downloads/ML.pdf" download>Download</a></li>
+                <li><strong>Computer Networks :</strong> <a href="downloads/CN.pdf" download>Download</a></li>
+                <li><strong>Data Structures:</strong> <a href="downloads/data-structres.pdf" download>Download</a></li>
+            </ul>
+        `;
+    });
+
     // Event listener for Logout
     logoutBtn.addEventListener('click', function() {
         const confirmation = confirm('Are you sure you want to log out?');
