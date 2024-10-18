@@ -9,7 +9,7 @@
 html, body {
     height: 100%;
     margin: 0;
-    background-image: url('images/clg.jpg'); /* Replace with the actual image path */
+    background-image: url('images/clg.jpg');
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -97,8 +97,6 @@ html, body {
     font-size: 2.5em;
     font-weight: bold;
     color: #ffffff;
-    
-    
 }
 
 /* Navigation items styling */
@@ -109,6 +107,14 @@ html, body {
     padding: 0;
     margin-left: 300px;
     background-color: #ffffff;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.74);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
 }
 
 .nav-item {
@@ -140,26 +146,48 @@ html, body {
     padding: 20px;
     border-radius: 8px;
     margin-right: 20px; /* Space between the two sections */
-    background-color: #ffffff98;
+    background: rgba(255, 255, 255, 0.242);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+.department-title{
+    margin-top:30px;
+    font-size: 2em;
 }
+.department-info p {
+    font-weight: 600;
+    margin-top:40px;
+    color: #000000;
+    font-size:1.2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}   
 
 /* Container Styling (for login form) */
 .container {
     flex: 1; /* Take less space on the right */
     max-width: 400px;
     width: 100%;
-    background-color: rgba(216, 232, 250, 0.66);
     border-radius: 28px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
-}
+    background: rgba(252, 252, 252, 0.267);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.4px);
+    -webkit-backdrop-filter: blur(3.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    }
 
 /* Login Form Title */
 .title {
     font-size: 1.8em;
     color: #000000;
     margin-bottom: 20px;
-    font-weight: 500;
+    font-weight: 900;
     text-align: center;
 }
 
@@ -170,7 +198,7 @@ html, body {
 
 label {
     color: #000000;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 input, select {
